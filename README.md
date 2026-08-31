@@ -107,7 +107,7 @@ docker run -it --entrypoint /bin/bash callmejainsahab/kjstockscreener:latest -c 
 
 ```bash
 git clone https://github.com/85599/KJStockScreener.git
-cd KJScreener
+cd KJStockScreener
 pip install -r requirements.txt
 ./run_kjscreener.sh --gui      # Streamlit web UI
 ./run_kjscreener.sh --cli      # Classic terminal UI
