@@ -139,10 +139,10 @@ rm updater.sh
             if _tag > now and not isDocker():
                 print(colorText.BOLD + colorText.FAIL + "[+] Executables are now DEPRECATED!\nFollow instructions given at https://github.com/85599/KJStockScreener to switch to Docker.\n" + colorText.END)
             elif _tag > now and isDocker():    # OTA not applicable if we're running in docker!
-                print(colorText.BOLD + colorText.FAIL + ('\n[+] New Software update (v%s) available.\n[+] Run `docker pull callmejainsahab/KJScreener:latest` to update your docker to the latest version!\n' % (str(resp.json()['tag_name']))) + colorText.END)
+                print(colorText.BOLD + colorText.FAIL + ('\n[+] New Software update (v%s) available.\n[+] Run `docker pull callmejainsahab/kjstockscreener:latest` to update your docker to the latest version!\n' % (str(resp.json()['tag_name']))) + colorText.END)
                 print(colorText.BOLD + colorText.WARN + "[+] What's New in this Update?\n" + OTAUpdater.showWhatsNew() + colorText.END)
                 if isGui():
-                    guiUpdateMessage = f"New Software update (v{resp.json()['tag_name']}) available - Watch this [**YouTube Video**](https://youtu.be/T41m13iMyJc) for additional help or Update by running following command:\n\n**`docker pull callmejainsahab/KJScreener:latest`**"
+                    guiUpdateMessage = f"New Software update (v{resp.json()['tag_name']}) available - Watch this [**YouTube Video**](https://youtu.be/T41m13iMyJc) for additional help or Update by running following command:\n\n**`docker pull callmejainsahab/kjstockscreener:latest`**"
             elif _tag < now:
                 # Local version is ahead of the tracked release repo (common for
                 # forks / custom builds). Treat as normal release, not "dev mode",

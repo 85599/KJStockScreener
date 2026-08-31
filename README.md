@@ -8,7 +8,7 @@
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/85599/KJStockScreener?style=for-the-badge)](https://github.com/85599/KJStockScreener/releases/latest)
 [![GitHub all releases](https://img.shields.io/github/downloads/85599/KJStockScreener/total?color=Green&label=Downloads&style=for-the-badge)](https://github.com/85599/KJStockScreener/releases)
-[![Docker Pulls](https://img.shields.io/docker/pulls/callmejainsahab/KJScreener?style=for-the-badge&logo=docker)](https://hub.docker.com/r/callmejainsahab/KJScreener)
+[![Docker Pulls](https://img.shields.io/docker/pulls/callmejainsahab/kjstockscreener?style=for-the-badge&logo=docker)](https://hub.docker.com/r/callmejainsahab/kjstockscreener)
 [![GitHub](https://img.shields.io/github/license/85599/KJStockScreener?style=for-the-badge)](https://github.com/85599/KJStockScreener/blob/main/LICENSE)
 [![MADE-IN-INDIA](https://img.shields.io/badge/MADE%20WITH%20%E2%9D%A4%20IN-INDIA-orange?style=for-the-badge)](https://en.wikipedia.org/wiki/India)
 
@@ -88,8 +88,8 @@ Whether you want to run a classic rule-based scan in two clicks, or *ask a chatb
 ### Option 1 — Docker (recommended)
 
 ```bash
-docker pull callmejainsahab/KJScreener:latest
-docker run -p 8501:8501 -p 8000:8000 callmejainsahab/KJScreener:latest
+docker pull callmejainsahab/kjstockscreener:latest
+docker run -p 8501:8501 -p 8000:8000 callmejainsahab/kjstockscreener:latest
 ```
 
 Then open **http://localhost:8501** in your browser.
@@ -97,7 +97,7 @@ Then open **http://localhost:8501** in your browser.
 Prefer the CLI mode instead of the web UI?
 
 ```bash
-docker run -it --entrypoint /bin/bash callmejainsahab/KJScreener:latest -c "run_kjscreener.sh --cli"
+docker run -it --entrypoint /bin/bash callmejainsahab/kjstockscreener:latest -c "run_kjscreener.sh --cli"
 ```
 
 ### Option 2 — Run from source

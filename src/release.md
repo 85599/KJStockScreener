@@ -1,4 +1,4 @@
-[![MADE-IN-INDIA](https://img.shields.io/badge/MADE%20WITH%20%E2%9D%A4%20IN-INDIA-orange?style=for-the-badge)](https://en.wikipedia.org/wiki/India) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/85599/KJStockScreener?style=for-the-badge)](#) [![GitHub all releases](https://img.shields.io/github/downloads/85599/KJStockScreener/total?color=Green&label=Downloads&style=for-the-badge)](#) ![Docker Pulls](https://img.shields.io/docker/pulls/callmejainsahab/KJScreener?style=for-the-badge&logo=docker) [![MADE_WITH](https://img.shields.io/badge/BUILT%20USING-PYTHON-yellow?style=for-the-badge&logo=python&logoColor=yellow)](https://www.python.org/)
+[![MADE-IN-INDIA](https://img.shields.io/badge/MADE%20WITH%20%E2%9D%A4%20IN-INDIA-orange?style=for-the-badge)](https://en.wikipedia.org/wiki/India) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/85599/KJStockScreener?style=for-the-badge)](#) [![GitHub all releases](https://img.shields.io/github/downloads/85599/KJStockScreener/total?color=Green&label=Downloads&style=for-the-badge)](#) ![Docker Pulls](https://img.shields.io/docker/pulls/callmejainsahab/kjstockscreener?style=for-the-badge&logo=docker) [![MADE_WITH](https://img.shields.io/badge/BUILT%20USING-PYTHON-yellow?style=for-the-badge&logo=python&logoColor=yellow)](https://www.python.org/)
 ## What's New?
 
 KJScreener is now on **YouTube** for additional help! - Thank You for your support :tada:
@@ -31,14 +31,14 @@ KJScreener is now on **YouTube** for additional help! - Thank You for your suppo
 | ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) | **[KJScreener.bin](https://github.com/85599/KJStockScreener/releases/download/2.02/KJScreener.bin)** | Not supported anymore, Use Docker method |
 | ![Mac OS](https://img.shields.io/badge/mac%20os-D3D3D3?style=for-the-badge&logo=apple&logoColor=000000) | **[KJScreener.run](https://github.com/85599/KJStockScreener/releases/download/2.02/KJScreener.run)** ([Read Installation Guide](https://github.com/85599/KJStockScreener/blob/main/INSTALLATION.md#for-macos)) | Not supported anymore, Use Docker method |
 
-## [Docker Releases](https://hub.docker.com/r/callmejainsahab/KJScreener/tags)
+## [Docker Releases](https://hub.docker.com/r/callmejainsahab/kjstockscreener/tags)
 
 | | Tag | Pull Command | Run Mode | Run Command |
 |:-: | :-: | --- | --- | --- |
-| ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) | `latest` | `docker pull callmejainsahab/KJScreener:latest` | Command Line | `docker run -it --entrypoint /bin/bash callmejainsahab/KJScreener:latest -c "run_KJScreener.sh --cli"` |
-| ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) | `latest` | `docker pull callmejainsahab/KJScreener:latest` | GUI WebApp | `docker run -p 8501:8501 -p 8000:8000 callmejainsahab/KJScreener:latest` |
-| ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) | `dev` | `docker pull callmejainsahab/KJScreener:dev` | Command Line | `docker run -it --entrypoint /bin/bash callmejainsahab/KJScreener:dev -c "run_KJScreener.sh --cli"` |
-| ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) | `dev` | `docker pull callmejainsahab/KJScreener:dev` | GUI WebApp | `docker run -p 8501:8501 -p 8000:8000 callmejainsahab/KJScreener:dev` |
+| ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) | `latest` | `docker pull callmejainsahab/kjstockscreener:latest` | Command Line | `docker run -it --entrypoint /bin/bash callmejainsahab/kjstockscreener:latest -c "run_KJScreener.sh --cli"` |
+| ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) | `latest` | `docker pull callmejainsahab/kjstockscreener:latest` | GUI WebApp | `docker run -p 8501:8501 -p 8000:8000 callmejainsahab/kjstockscreener:latest` |
+| ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) | `dev` | `docker pull callmejainsahab/kjstockscreener:dev` | Command Line | `docker run -it --entrypoint /bin/bash callmejainsahab/kjstockscreener:dev -c "run_KJScreener.sh --cli"` |
+| ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) | `dev` | `docker pull callmejainsahab/kjstockscreener:dev` | GUI WebApp | `docker run -p 8501:8501 -p 8000:8000 callmejainsahab/kjstockscreener:dev` |
 
 ### Docker Issues? Troubleshooting Guide:
 
@@ -48,7 +48,7 @@ Read this [troubleshooting guide](https://github.com/85599/KJStockScreener/discu
 
 | Executable/Binary File | Docker |
 | :-- | :-- |
-| [![GitHub all releases](https://img.shields.io/github/downloads/85599/KJStockScreener/total?color=Green&label=Downloads&style=for-the-badge)](#) | ![Docker Pulls](https://img.shields.io/docker/pulls/callmejainsahab/KJScreener?style=for-the-badge&logo=docker) |
+| [![GitHub all releases](https://img.shields.io/github/downloads/85599/KJStockScreener/total?color=Green&label=Downloads&style=for-the-badge)](#) | ![Docker Pulls](https://img.shields.io/docker/pulls/callmejainsahab/kjstockscreener?style=for-the-badge&logo=docker) |
 | Download Directly from the [Release](https://github.com/85599/KJStockScreener/releases/latest) page (DEPRECATED) | Need to Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) ⚠️|
 | May take a long time to open the app | Loads quickly |
 | Slower screening | Performance boosted as per your CPU capabilities |
