@@ -71,16 +71,16 @@ Whether you want to run a classic rule-based scan in two clicks, or *ask a chatb
 ## 🖼️ Screenshots
 
 <p align="center">
-  <img width="1200" alt="KJScreener classic screening tab" src="https://github.com/85599/KJStockScreener/assets/6128978/2016be00-5892-4735-8ab3-5f5b70add103">
+  <img width="1200" alt="KJStockScreener classic screening tab" src="screenshots/classic-screening.png">
 </p>
 <p align="center">
-  <img width="1200" alt="KJScreener screening results" src="https://github.com/85599/KJStockScreener/assets/6128978/28947290-7f42-4f6f-9fc0-0bae1ee6d6f4">
+  <img width="1200" alt="KJStockScreener AI Native chat" src="screenshots/ai-native-chat.png">
 </p>
 <p align="center">
-  <img width="1200" alt="KJScreener additional view" src="https://github.com/85599/KJStockScreener/assets/6128978/857f8acc-a4e8-4b86-a748-c26057b0e8b1">
+  <img width="1200" alt="KJStockScreener option chain" src="screenshots/option-chain.png">
 </p>
 <p align="center">
-  <img width="1200" alt="KJScreener configuration" src="https://github.com/85599/KJStockScreener/assets/6128978/360b5faa-f4f4-4df6-bec1-90985889bee6">
+  <img width="1200" alt="KJStockScreener configuration" src="screenshots/config.png">
 </p>
 
 ## 🚀 Quick Start
