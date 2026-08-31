@@ -19,6 +19,9 @@
 
 **⭐ If KJScreener helps your trading workflow, please star the repo — it genuinely helps the project grow!**
 
+### 🚀 Live Demo
+**[Click here to try KJScreener online →](https://kjstockscreener.streamlit.app)**
+
 [Quick Start](#-quick-start) · [Features](#-features) · [AI Agent Setup](#-ai-native-mode-setup) · [Screenshots](#️-screenshots) · [Contributing](#-contributing)
 
 </div>
