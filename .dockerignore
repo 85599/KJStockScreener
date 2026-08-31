@@ -1,0 +1,11 @@
+**/__pycache__
+**/*.pyc
+**/*.pyo
+.git
+.gitignore
+*.pkl
+*.db
+last_screened*
+.KJScreener_sessions
+*.md
+LICENSE*

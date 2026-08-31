@@ -1,0 +1,75 @@
+# numpy==1.21.0 # Installed as dependency for yfinance, scipy, matplotlib, pandas
+numpy==2.1.0
+appdirs
+cachecontrol
+contextlib2
+distlib
+distro
+html5lib
+ipaddr
+lockfile
+nsetools
+openpyxl
+pep517
+pip
+pip-chill
+progress
+pytest-mock
+pytoml
+retrying
+scipy>=1.15.0
+ta-lib>=0.6.5
+tabulate
+yfinance==0.2.61
+alive-progress>=3.2.0
+Pillow
+joblib
+altgraph # Installed as dependency for pyinstaller
+atomicwrites # Installed as dependency for pytest
+attrs # Installed as dependency for pytest
+certifi # Installed as dependency for requests
+chardet # Installed as dependency for requests
+colorama # Installed as dependency for pytest
+dateutils # Installed as dependency for nsetools
+et-xmlfile # Installed as dependency for openpyxl
+future # Installed as dependency for pefile
+idna # Installed as dependency for requests
+iniconfig # Installed as dependency for pytest
+lxml # Installed as dependency for yfinance
+msgpack # Installed as dependency for cachecontrol
+multitasking # Installed as dependency for yfinance
+packaging # Installed as dependency for pytest
+pandas==2.2.3
+pefile # Installed as dependency for pyinstaller
+pluggy # Installed as dependency for pytest
+py # Installed as dependency for pytest
+pyinstaller-hooks-contrib # Installed as dependency for pyinstaller
+pyparsing # Installed as dependency for packaging, matplotlib
+pytest # Installed as dependency for pytest-mock
+python-dateutil # Installed as dependency for dateutils, matplotlib, pandas
+pytz # Installed as dependency for dateutils, pandas
+pywin32-ctypes # Installed as dependency for pyinstaller
+requests # Installed as dependency for yfinance, cachecontrol
+setuptools # Installed as dependency for pyinstaller
+six # Installed as dependency for cycler, nsetools, packaging, retrying, python-dateutil, html5lib
+toml # Installed as dependency for pep517, pytest
+urllib3 # Installed as dependency for requests
+webencodings # Installed as dependency for html5lib
+# advanced-ta and pandas-ta-remake have conflicting numpy constraints;
+# installed separately with --no-deps in Dockerfile and CI workflow
+# pandas-ta-remake (excluded from requirements.txt, installed via --no-deps)
+streamlit
+streamlit-local-storage>=0.0.1
+chromadb>=1.0.0
+mplfinance>=0.12.9b7
+num2words
+ta
+# advanced-ta (excluded from requirements.txt, installed via --no-deps)
+openai==2.44.0
+anthropic
+litellm
+pyyaml
+httpx
+apscheduler
+plotly
+openai-agents>=0.2.0,<0.16.0

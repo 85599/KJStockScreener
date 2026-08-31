@@ -1,0 +1,11 @@
+kite_mcp:
+  enabled: true
+  url: https://mcp.kite.trade/mcp
+llm:
+  api_key_env: KJScreener_API_KEY
+  base_url: https://api.groq.com/openai/v1
+  model: openai/gpt-oss-120b
+  provider: openai-compatible
+schedule: []
+workflow:
+  default_mode: classic
