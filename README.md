@@ -6,6 +6,8 @@
 
 **Find breakouts. Chat with an AI trading agent. Explore company fundamentals. Track live option chains. All in one Streamlit app.**
 
+### 🚀 [**Try it live — no install needed**](https://kjstockscreener.streamlit.app/)
+
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/85599/KJStockScreener?style=for-the-badge)](https://github.com/85599/KJStockScreener/releases/latest)
 [![GitHub all releases](https://img.shields.io/github/downloads/85599/KJStockScreener/total?color=Green&label=Downloads&style=for-the-badge)](https://github.com/85599/KJStockScreener/releases)
 [![Docker Pulls](https://img.shields.io/docker/pulls/callmejainsahab/kjstockscreener?style=for-the-badge&logo=docker)](https://hub.docker.com/r/callmejainsahab/kjstockscreener)
@@ -90,6 +92,10 @@ Whether you want to run a classic rule-based scan in two clicks, or *ask a chatb
 </p>
 
 ## 🚀 Quick Start
+
+### Option 0 — Try it instantly (no setup)
+
+Just open **[kjstockscreener.streamlit.app](https://kjstockscreener.streamlit.app/)** — nothing to install.
 
 ### Option 1 — Docker (recommended)
 
