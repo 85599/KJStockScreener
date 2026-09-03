@@ -1453,6 +1453,70 @@ with tab_about:
     st.markdown(f'## ℹ️ About KJScreener v{VERSION}')
     st.info("👨🏻‍💻 Developer: Khushal Jain | Open Source NSE Stock Screener")
 
+    st.warning(
+        "**Disclaimer:** This tool is for analysis and study purposes only. "
+        "We do **not** provide Buy/Sell advice for any securities. "
+        "Authors will not be held liable for any financial losses. "
+        "Please understand the risks of market investing before trading.",
+        icon="⚠️",
+    )
+
+    st.markdown('<p class="section-header">Project</p>', unsafe_allow_html=True)
+    st.markdown(f"""
+    <div class="in-profiles">
+      <a class="in-card in-saffron" href="https://github.com/85599/KJStockScreener" target="_blank" rel="noopener">
+        <div class="stripe-top"></div>
+        <div class="body">
+          <div class="icon">🏠</div>
+          <div class="title">Home Page</div>
+          <div class="handle">85599/KJStockScreener</div>
+          <div class="cta">View repo →</div>
+        </div>
+        <div class="stripe-bot"></div>
+      </a>
+      <a class="in-card in-white" href="https://github.com/85599/KJStockScreener/issues" target="_blank" rel="noopener">
+        <div class="stripe-top"></div>
+        <div class="body">
+          <div class="icon">⚠️</div>
+          <div class="title">Issues</div>
+          <div class="handle">Report a bug</div>
+          <div class="cta">Open issue →</div>
+        </div>
+        <div class="stripe-bot"></div>
+      </a>
+      <a class="in-card in-green" href="https://github.com/85599/KJStockScreener/discussions" target="_blank" rel="noopener">
+        <div class="stripe-top"></div>
+        <div class="body">
+          <div class="icon">📣</div>
+          <div class="title">Discussions</div>
+          <div class="handle">Ask & suggest</div>
+          <div class="cta">Join in →</div>
+        </div>
+        <div class="stripe-bot"></div>
+      </a>
+      <a class="in-card in-saffron" href="https://github.com/85599/KJStockScreener/releases/latest" target="_blank" rel="noopener">
+        <div class="stripe-top"></div>
+        <div class="body">
+          <div class="icon">⬇️</div>
+          <div class="title">Latest Release</div>
+          <div class="handle">v{VERSION}</div>
+          <div class="cta">Download →</div>
+        </div>
+        <div class="stripe-bot"></div>
+      </a>
+      <a class="in-card in-white" href="https://whatsapp.com/channel/0029VbDBzHuFSAtDL0vkQQ3Q" target="_blank" rel="noopener">
+        <div class="stripe-top"></div>
+        <div class="body">
+          <div class="icon">💬</div>
+          <div class="title">WhatsApp</div>
+          <div class="handle">Join channel</div>
+          <div class="cta">Open →</div>
+        </div>
+        <div class="stripe-bot"></div>
+      </a>
+    </div>
+    """, unsafe_allow_html=True)
+
     st.markdown('<p class="section-header">Connect</p>', unsafe_allow_html=True)
 
     # India tricolour profile cards — saffron / white / green
