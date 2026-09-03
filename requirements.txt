@@ -1,6 +1,7 @@
 # numpy==1.21.0 # Installed as dependency for yfinance, scipy, matplotlib, pandas
 numpy==2.1.0
 appdirs
+beautifulsoup4>=4.12  # Installed as dependency for LedgerLens (screener.in scraping)
 cachecontrol
 contextlib2
 distlib

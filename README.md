@@ -1,10 +1,10 @@
 <div align="center">
 
-# 📈 KJScreener
+# 📈 KJStockScreener
 
 ### AI-Native Stock Screener for the Indian Stock Market (NSE)
 
-**Find breakouts. Chat with an AI trading agent. Track live option chains. All in one Streamlit app.**
+**Find breakouts. Chat with an AI trading agent. Explore company fundamentals. Track live option chains. All in one Streamlit app.**
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/85599/KJStockScreener?style=for-the-badge)](https://github.com/85599/KJStockScreener/releases/latest)
 [![GitHub all releases](https://img.shields.io/github/downloads/85599/KJStockScreener/total?color=Green&label=Downloads&style=for-the-badge)](https://github.com/85599/KJStockScreener/releases)
@@ -17,7 +17,7 @@
 [![Mac OS](https://img.shields.io/badge/mac%20os-D3D3D3?style=for-the-badge&logo=apple&logoColor=000000)](#)
 [![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](#)
 
-**⭐ If KJScreener helps your trading workflow, please star the repo — it genuinely helps the project grow!**
+**⭐ If KJStockScreener helps your trading workflow, please star the repo — it genuinely helps the project grow!**
 
 [Quick Start](#-quick-start) · [Features](#-features) · [AI Agent Setup](#-ai-native-mode-setup) · [Screenshots](#️-screenshots) · [Contributing](#-contributing)
 
@@ -25,11 +25,11 @@
 
 ---
 
-## What is KJScreener?
+## What is KJStockScreener?
 
-**KJScreener** is a Python + Streamlit screener for **NSE (India)** stocks that goes beyond a typical breakout scanner. On top of a classic multi-threaded technical screening engine (breakouts, consolidation, RSI, moving-average crossovers, candlestick patterns), v3.0.2 adds an **AI-native trading agent**, a **live NSE option chain viewer**, and an **ML-based Nifty gap-up/gap-down predictor** — all inside one self-contained web app.
+**KJStockScreener** is a Python + Streamlit screener for **NSE (India)** stocks that goes beyond a typical breakout scanner. On top of a classic multi-threaded technical screening engine (breakouts, consolidation, RSI, moving-average crossovers, candlestick patterns), v3.0.2 adds an **AI-native trading agent**, a **live NSE option chain viewer**, an **ML-based Nifty gap-up/gap-down predictor**, and **LedgerLens** — a built-in fundamentals explorer that pulls a company's full financials, ratios, and filings straight from screener.in — all inside one self-contained web app.
 
-Whether you want to run a classic rule-based scan in two clicks, or *ask a chatbot in plain English* to "find me swing setups in Nifty 500 with RSI between 50 and 65," KJScreener has a mode for it.
+Whether you want to run a classic rule-based scan in two clicks, or *ask a chatbot in plain English* to "find me swing setups in Nifty 500 with RSI between 50 and 65," KJStockScreener has a mode for it.
 
 ## ✨ Features
 
@@ -62,6 +62,12 @@ Whether you want to run a classic rule-based scan in two clicks, or *ask a chatb
 - A trained model predicts next-day Nifty gap-up/gap-down using Nifty, Gold, and Crude price action
 - Ships as a pure NumPy `.npz` weights file — **no TensorFlow dependency**, works out of the box on Python 3.13
 
+### 📒 LedgerLens — Fundamentals Explorer
+- Pulls a company's complete fundamentals straight from screener.in: quarterly results, P&L, balance sheet, cash flow, ratios, shareholding pattern, peer comparison, pros/cons, and documents (annual reports, credit ratings, concall transcripts)
+- Search by name or symbol, pick Consolidated/Standalone, choose which sections to pull
+- Auto-generated Sales vs Net Profit chart per company
+- Download any section as CSV, the full summary as JSON, or everything at once as a ZIP (JSON + CSV + Excel per section)
+
 ### 🧰 Everything Else You'd Expect
 - Portfolio & watchlist tracking, position-size calculator
 - Vector-similarity "Search Similar Stocks"
@@ -71,16 +77,16 @@ Whether you want to run a classic rule-based scan in two clicks, or *ask a chatb
 ## 🖼️ Screenshots
 
 <p align="center">
-  <img width="1200" alt="KJScreener classic screening tab" src="https://github.com/85599/KJStockScreener/assets/6128978/2016be00-5892-4735-8ab3-5f5b70add103">
+  <img width="1200" alt="KJStockScreener classic screening tab" src="screenshots/classic-screening.png">
 </p>
 <p align="center">
-  <img width="1200" alt="KJScreener screening results" src="https://github.com/85599/KJStockScreener/assets/6128978/28947290-7f42-4f6f-9fc0-0bae1ee6d6f4">
+  <img width="1200" alt="KJStockScreener screening results" src="screenshots/ai-native-chat.png">
 </p>
 <p align="center">
-  <img width="1200" alt="KJScreener additional view" src="https://github.com/85599/KJStockScreener/assets/6128978/857f8acc-a4e8-4b86-a748-c26057b0e8b1">
+  <img width="1200" alt="KJStockScreener additional view" src="screenshots/option-chain.png">
 </p>
 <p align="center">
-  <img width="1200" alt="KJScreener configuration" src="https://github.com/85599/KJStockScreener/assets/6128978/360b5faa-f4f4-4df6-bec1-90985889bee6">
+  <img width="1200" alt="KJStockScreener configuration" src="screenshots/config.png">
 </p>
 
 ## 🚀 Quick Start
@@ -104,7 +110,7 @@ docker run -it --entrypoint /bin/bash callmejainsahab/kjstockscreener:latest -c 
 
 ```bash
 git clone https://github.com/85599/KJStockScreener.git
-cd KJScreener
+cd KJStockScreener
 pip install -r requirements.txt
 ./run_kjscreener.sh --gui      # Streamlit web UI
 ./run_kjscreener.sh --cli      # Classic terminal UI
@@ -171,7 +177,7 @@ Tweak these to match your trading style — e.g. set `duration = 5d` for weekly 
 
 ## 🛠️ Tech Stack
 
-Python 3.13 · Streamlit · `openai-agents` · pandas / numpy / scipy · `ta-lib` · yfinance · ChromaDB (vector search) · Plotly · Docker
+Python 3.13 · Streamlit · `openai-agents` · pandas / numpy / scipy · `ta-lib` · yfinance · BeautifulSoup4 · ChromaDB (vector search) · Plotly · Docker
 
 ## 🤝 Contributing
 
@@ -183,11 +189,12 @@ Issues and pull requests are welcome!
 
 ## ⚠️ Disclaimer
 
-KJScreener is a research and educational tool. It does **not** constitute investment advice.
+KJStockScreener is a research and educational tool. It does **not** constitute investment advice.
 
 - Do **not** use its output as the sole basis for your trading decisions.
 - Always backtest and verify signals manually before trading.
 - The author and this software are not liable for any trading losses incurred.
+- **LedgerLens** is an unofficial tool that reads publicly available pages on [screener.in](https://www.screener.in) — it's not affiliated with or endorsed by them. It scrapes politely (rate-limited, retried with backoff) and is meant for personal research; please respect screener.in's terms of use.
 
 ## 📄 License
 

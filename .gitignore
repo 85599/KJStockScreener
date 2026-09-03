@@ -12,7 +12,11 @@ results*.pkl
 .history/
 *.code-workspace
 *.db
-src/static/blog_images/*KJScreener.ini
+src/static/blog_images/*
+KJScreener.ini
 kjscreener_portfolio.json
 kjscreener_watchlist.json
 last_screened_run_meta.txt
+last_screened*.pkl
+ledgerlens_output/
+.ledgerlens_cache/
