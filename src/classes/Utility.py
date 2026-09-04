@@ -122,8 +122,8 @@ class tools:
 
     def isClosingHour():
         curr = datetime.datetime.now(pytz.timezone('Asia/Kolkata'))
-        openTime = curr.replace(hour=15, minute=00)
-        closeTime = curr.replace(hour=15, minute=40)
+        openTime = curr.replace(hour=18, minute=30)
+        closeTime = curr.replace(hour=19, minute=00)
         return ((openTime <= curr <= closeTime) and (0 <= curr.weekday() <= 4))
 
     def getNiftyModel(proxyServer=None):
