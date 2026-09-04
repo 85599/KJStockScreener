@@ -735,7 +735,7 @@ def gap_predict(index_choice: str, col, custom_symbol: str = None):
         col.error(f'{label} may Open **Gap Down** next day!\n\nProbability/Strength of Prediction = {confidence}%', icon='📉')
     else:
         col.info(f"Couldn't determine the trend for {label}. Try again later!")
-    col.warning('This prediction should be read After 3:40 PM (once the CAS closing auction has settled) as its accuracy is based on the official closing price!\n\nThis is Just a Statistical Prediction and There are Chances of **False** Predictions!', icon='⚠️')
+    col.warning('For entering a **same-day BTST position**, this is most actionable around **3:10-3:15 PM** (just before the CAS auction begins) — the price then is very close to the final close. A check after **3:40 PM** (once CAS has settled) is more accurate but only useful for planning tomorrow, not for placing today\'s order.\n\nThis is Just a Statistical Prediction and There are Chances of **False** Predictions!', icon='⚠️')
     if is_ml:
         col.info("**Method:** Trained ML model (dense neural net) using NIFTY, Crude and Gold historical prices.", icon='🧠')
     else:
