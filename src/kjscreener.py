@@ -405,9 +405,11 @@ def main(testing=False, testBuild=False, downloadOnly=False, execute_inputs:list
             try:
                 numStocks, totalStocks = len(listStockCodes), len(listStockCodes)
                 os.environ['KJScreener_TOTAL_STOCKS'] = str(totalStocks)
-                print(colorText.END+colorText.BOLD)
-                bar, spinner = Utility.tools.getProgressbarStyle()
-                with alive_bar(numStocks, bar=bar, spinner=spinner) as progressbar:
+                # alive_bar paints a live terminal bar using ANSI control codes.
+                # Under Streamlit/Docker there is no TTY, so those escape
+                # sequences only flood/garble the server console while the
+                # browser shows its own spinner — skip the bar in that case.
+                if isGui() or isDocker():
                     while numStocks:
                         result = results_queue.get()
                         if result is not None:
@@ -415,9 +417,20 @@ def main(testing=False, testBuild=False, downloadOnly=False, execute_inputs:list
                             saveResults = pd.concat([saveResults, pd.DataFrame([result[1]])], ignore_index=True)
                         numStocks -= 1
                         os.environ['KJScreener_SCREEN_COUNTER'] = str(int((totalStocks-numStocks)/totalStocks*100))
-                        progressbar.text(colorText.BOLD + colorText.GREEN +
-                                         f'Found {screenResultsCounter.value} Stocks' + colorText.END)
-                        progressbar()
+                else:
+                    print(colorText.END+colorText.BOLD)
+                    bar, spinner = Utility.tools.getProgressbarStyle()
+                    with alive_bar(numStocks, bar=bar, spinner=spinner) as progressbar:
+                        while numStocks:
+                            result = results_queue.get()
+                            if result is not None:
+                                screenResults = pd.concat([screenResults, pd.DataFrame([result[0]])], ignore_index=True)
+                                saveResults = pd.concat([saveResults, pd.DataFrame([result[1]])], ignore_index=True)
+                            numStocks -= 1
+                            os.environ['KJScreener_SCREEN_COUNTER'] = str(int((totalStocks-numStocks)/totalStocks*100))
+                            progressbar.text(colorText.BOLD + colorText.GREEN +
+                                             f'Found {screenResultsCounter.value} Stocks' + colorText.END)
+                            progressbar()
             except KeyboardInterrupt:
                 try:
                     keyboardInterruptEvent.set()

@@ -266,16 +266,23 @@ class tools:
                 try:
                     chunksize = 1024*1024*1
                     filesize = int(int(resp.headers.get('content-length'))/chunksize)
-                    bar, spinner = tools.getProgressbarStyle()
                     f = open(cache_file, 'wb')
                     dl = 0
-                    with alive_bar(filesize, bar=bar, spinner=spinner, manual=True) as progressbar:
+                    # alive_bar emits ANSI control codes that only make sense on
+                    # a real terminal. Under Streamlit/Docker (no TTY) they just
+                    # garble the server console, so download plainly instead.
+                    if isGui() or isDocker():
                         for data in resp.iter_content(chunk_size=chunksize):
-                            dl += 1
                             f.write(data)
-                            progressbar(dl/filesize)
-                            if dl >= filesize:
-                                progressbar(1.0)
+                    else:
+                        bar, spinner = tools.getProgressbarStyle()
+                        with alive_bar(filesize, bar=bar, spinner=spinner, manual=True) as progressbar:
+                            for data in resp.iter_content(chunk_size=chunksize):
+                                dl += 1
+                                f.write(data)
+                                progressbar(dl/filesize)
+                                if dl >= filesize:
+                                    progressbar(1.0)
                     f.close()
                 except Exception as e:
                     print("[!] Download Error - " + str(e))

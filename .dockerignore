@@ -9,3 +9,14 @@ last_screened*
 .KJScreener_sessions
 *.md
 LICENSE*
+
+# Secrets must never be baked into the image
+.env
+.env.*
+*.pem
+*.key
+credentials*.json
+secrets*.json
+kjscreener_portfolio.json
+kjscreener_watchlist.json
+KJScreener.ini

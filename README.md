@@ -29,7 +29,7 @@
 
 ## What is KJStockScreener?
 
-**KJStockScreener** is a Python + Streamlit screener for **NSE (India)** stocks that goes beyond a typical breakout scanner. On top of a classic multi-threaded technical screening engine (breakouts, consolidation, RSI, moving-average crossovers, candlestick patterns), v3.0.2 adds an **AI-native trading agent**, a **live NSE option chain viewer**, an **ML-based Nifty gap-up/gap-down predictor**, and **LedgerLens** — a built-in fundamentals explorer that pulls a company's full financials, ratios, and filings straight from screener.in — all inside one self-contained web app.
+**KJStockScreener** is a Python + Streamlit screener for **NSE (India)** stocks that goes beyond a typical breakout scanner. On top of a classic multi-threaded technical screening engine (breakouts, consolidation, RSI, moving-average crossovers, candlestick patterns), it adds an **AI-native trading agent**, a **live NSE option chain viewer**, an **ML-based Nifty gap-up/gap-down predictor**, and **LedgerLens** — a built-in fundamentals explorer that pulls a company's full financials, ratios, and filings straight from screener.in — all inside one self-contained web app.
 
 Whether you want to run a classic rule-based scan in two clicks, or *ask a chatbot in plain English* to "find me swing setups in Nifty 500 with RSI between 50 and 65," KJStockScreener has a mode for it.
 

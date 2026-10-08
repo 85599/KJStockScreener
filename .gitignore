@@ -20,3 +20,21 @@ last_screened_run_meta.txt
 last_screened*.pkl
 ledgerlens_output/
 .ledgerlens_cache/
+
+# ── Secrets & credentials (never commit user data) ────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+credentials*.json
+secrets*.json
+
+# ── Broker / Kite login sessions ──────────────────────────────────────────
+.KJScreener_sessions/
+kite_session*.json
+*.session
+
+# ── Local run lock / transient state ──────────────────────────────────────
+kjscreener_running.lock
